@@ -1,0 +1,38 @@
+-Pixel_constraint:
+#Test case med giltiga och ogiltiga värden
+Detta test validerar om funktionen korrekt hanterar både giltiga och ogiltiga värden. Det är viktigt eftersom felaktiga värden 
+kan leda till oväntade resultat eller kraschar. Genom att säkerställa att felaktiga värden fångas tidigt minskar risken för buggar.
+#Gränsvärdestest
+Här testas om funktionen hanterar värden som ligger på gränsen för det tillåtna intervallet. Detta är viktigt för att kontrollera 
+att funktionen inte felaktigt avvisar giltiga värden eller accepterar värden som borde vara ogiltiga, vilket är ett vanligt fel i många system.
+#ValueError-test
+Testar om funktionen kan identifiera och hantera felaktiga HSV-värden. Detta säkerställer att användaren får rätt felmeddelande 
+när de anger värden som ligger utanför det förväntade intervallet för HSV.
+#TypeError-test
+Här testas funktionen med olika typer av oväntade data, som strängar, listor, tupler och None. Detta är kritiskt eftersom 
+funktionen måste vara robust nog att hantera felaktiga typer och ge användbara felmeddelanden, vilket förhindrar oväntade kraschar.
+
+-generator_from_image:
+#Test case med giltiga värden
+Validerar att funktionen korrekt hanterar giltig input och genererar förväntad output. Detta är nödvändigt 
+för att säkerställa att normal användning fungerar som avsett.
+#Test case med ogiltiga värden
+Här testas hur funktionen hanterar felaktiga värden som exempelvis input utanför det förväntade intervallet. 
+Detta test är avgörande för att se till att funktionen inte bryter samman när den stöter på ogiltig data.
+#Test case med ogiltigt index
+Testar hur funktionen beter sig när ett index som ligger utanför bildens storlek används. Detta är viktigt 
+för att säkerställa att funktionen kan hantera indexfel utan att krascha eller ge felaktiga resultat.
+#Test med input utanför gränsvärden
+Detta test utvärderar om funktionen korrekt identifierar och hanterar input som ligger utanför gränsvärdena 
+för HSV. Detta säkerställer att användaren får korrekt feedback och att funktionen förblir stabil vid felaktiga inmatningar.
+
+-combine_images:
+#Test case med giltiga värden
+Här testas om funktionen fungerar korrekt när den får giltig input. Detta är viktigt för att verifiera att 
+funktionen levererar förväntade resultat under normala förhållanden.
+#Test case med ogiltiga värden
+Testar funktionen med olika typer av felaktig input, såsom HSV-värden utanför tillåtna gränser och tupler med fel antal 
+element. Det säkerställer att funktionen är robust och kan hantera oförutsedda situationer utan att krascha eller ge felaktiga resultat.
+#Test med felaktiga generator-värden
+Testar hur funktionen hanterar felaktiga generatorvärden där antalet element skiljer sig från det förväntade, eller där de inte
+ matchar HSV-värdena. Detta är viktigt för att se till att funktionen kan hantera oförutsedda fel och ge användaren informativa felmeddelanden.
